@@ -74,7 +74,7 @@ function loadTextFromFile(file){
 }
 
 function readText(){
-  app.textArray = app.textToRead.value.trim().split(" ");
+  app.textArray = app.textToRead.value.trim().replace(/\n/g,' ').split(" ");
   app.textArray.push(""); // add a pause at the end before clearing the display
   if(app.interval){
     clearInterval(app.interval);
